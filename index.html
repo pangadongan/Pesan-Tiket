@@ -1,1 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulir Pemesanan Tiket Konser</title>
+</head>
+<body>
 
+    <h1>Pemesanan Tiket Konser Musik</h1>
+    <p>Silakan isi data diri Anda di bawah ini untuk memesan tiket.</p>
+
+    <form action="#" method="POST">
+        <!-- Nama Lengkap -->
+        <label for="nama">Nama Lengkap:</label><br>
+        <input type="text" id="nama" name="nama" required><br><br>
+
+        <!-- Email -->
+        <label for="email">Alamat Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <!-- Nomor Telepon -->
+        <label for="telepon">Nomor Telepon / WhatsApp:</label><br>
+        <input type="tel" id="telepon" name="telepon" required><br><br>
+
+        <!-- Pilih Kategori Tiket -->
+        <label for="kategori">Pilih Kategori Tiket:</label><br>
+        <select id="kategori" name="kategori" required>
+            <option value="">-- Pilih Tiket --</option>
+            <option value="festival">Festival (Rp 350.000)</option>
+            <option value="tribun">Tribun / Cat 2 (Rp 500.000)</option>
+            <option value="vip">VIP (Rp 1.000.000)</option>
+            <option value="vip_vip">VVIP (Rp 2.000.000)</option>
+        </select><br><br>
+
+        <!-- Jumlah Tiket -->
+        <label for="jumlah">Jumlah Tiket:</label><br>
+        <input type="number" id="jumlah" name="jumlah" min="1" max="5" value="1" required><br><br>
+
+        <!-- Metode Pembayaran -->
+        <label>Metode Pembayaran:</label><br>
+        <input type="radio" id="transfer" name="pembayaran" value="transfer" required>
+        <label for="transfer">Transfer Bank</label><br>
+        <input type="radio" id="ewallet" name="pembayaran" value="ewallet">
+        <label for="ewallet">E-Wallet (OVO / Dana / Gopay)</label><br>
+        <input type="radio" id="qrish" name="pembayaran" value="qrish">
+        <label for="qrish">QRIS</label><br><br>
+
+        <!-- Catatan Tambahan -->
+        <label for="catatan">Catatan Tambahan (Opsional):</label><br>
+        <textarea id="catatan" name="catatan" rows="4" cols="30"></textarea><br><br>
+
+        <!-- Tombol Submit dan Reset -->
+        <button type="submit">Pesan Tiket</button>
+        <button type="reset">Reset Formulir</button>
+    </form>
+
+</body>
+</html>
